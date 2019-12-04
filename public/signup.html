@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Passport Authentication</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+  <link href="stylesheets/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h2>Sign Up Form</h2>
+        <form class="signup">
+            <div class="form-group">
+                <label for="firstnameInput">First name</label>
+                <input type="text" class="form-control" id="firstname-input" placeholder="First Name">
+              </div>
+              <div class="form-group">
+                  <label for="lastnameInput">Last name</label>
+                  <input type="text" class="form-control" id="lastname-input" placeholder="Last Name">
+                </div>  
+                <div class="form-group">
+                    <label for="usernameInput">Username</label>
+                    <input type="text" class="form-control" id="username-input" placeholder="Username">
+                  </div>             
+          <div class="form-group">
+            <label for="emailInput">Email address</label>
+            <input type="email" class="form-control" id="email-input" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <label for="passwordInput">Password</label>
+            <input type="password" class="form-control" id="password-input" placeholder="Password">
+          </div>
+          <div class="form-group">
+              <label for="positionInput">Position (Role)</label>
+              <input type="text" class="form-control" id="position-input" placeholder="Position">
+            </div>             
+            <div class="form-group">
+              <label for="startInput">Start Date</label>
+              <input type="date" class="form-control" id="start-input" placeholder="2010-01-01">
+            </div>
+            <div class="form-group">
+              <label for="indstartInput">Industry Start Date</label>
+              <input type="date" class="form-control" id="indstart-input" placeholder="2010-01-01">
+            </div>
+                <div class="form-group">
+                  <label for="schoolInput">College/University</label>
+                  <input type="text" class="form-control" id="school-input" placeholder="School(s)">
+                </div>     
+                <div class="form-group">
+                  <label for="schoolInput">Degree(s)</label>
+                  <input type="text" class="form-control" id="degree-input" placeholder="Degree(s)">
+                </div>   
+                <div class="form-group">
+                  <label for="certInput">Certification(s)</label>
+                  <input type="text" class="form-control" id="cert-input" placeholder="Certification(s)">
+                </div>     
+                <div class="form-group">
+                  <label for="photoInput">Photo</label>
+                  <input type="string" class="form-control" id="photo-input" placeholder="link for photo">
+                </div> 
+
+          <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span> <span class="msg"></span>
+          </div>
+          <button type="submit" class="btn btn-default">Sign Up</button>
+        </form>
+        <br />
+        <p>Or log in <a href="/login">here</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/signup.js"></script>
+
+</body>
+
+</html>
