@@ -82,10 +82,10 @@ module.exports = function(sequelize, DataTypes) {
     },
     
     sector: {
-      type: DataTypes.INTEGER
+      type: DataTypes.TEXT
     },
     const_type: {
-      type: DataTypes.INTEGER
+      type: DataTypes.TEXT
     },
     leed: {
       type: DataTypes.BOOLEAN

@@ -1,33 +1,35 @@
 // Getting references to our form and input
 var reportEntryForm = $("form.reportentry");
-var projnameInput = $("projname-input");
-var projaddressInput = $("projaddress-input");
-var projcityInput = $("projcity-input");
-var projcountyInput = $(" projcounty-input");
-var projstateInput = $("projstate-input");
-var projdescInput = $("projdesc-input"); 
-var bldgsizeInput = $("bldgsize-input"); 
-var projmgrInput = $("projmgr-input"); 
-var projsupInput = $("projsup-input"); 
-var architectInput = $("architect-input"); 
-var civilengInput = $("civileng-input"); 
-var mechengInput = $("mecheng-input"); 
-var elecengInput = $("eleceng-input");
-var plumbengInput = $("plumbeng-input");
-var landarchInput = $("landarch-input");
-var intdesignInput = $("intdesign-input"); 
-var schedstartInput = $("schedstart-input"); 
-var schedcomplInput = $("schedcompl-input"); 
-var schedreasonInput = $("schedreason-input"); 
-var initbudgetInput = $("initbudget-input"); 
-var finalbudgetInput = $("finalbudget-input"); 
-var budgetreasonInput = $("budgetreason-input"); 
-var sectorInput = $("sector-input"); 
-var consttypeInput = $("consttype-input");
-var leedInput = $("leed-input"); 
-var awardsInput = $("awards-input"); 
-var projchallengesInput = $("projchallenges-input"); 
-var projstrengthsInput = $("projstrengths-input"); 
+var projnameInput = $("input#projname-input");
+var projaddressInput = $("input#projaddress-input");
+var projcityInput = $("input#projcity-input");
+var projcountyInput = $("input#projcounty-input");
+var projstateInput = $("input#projstate-input");
+var projdescInput = $("input#projdesc-input"); 
+var bldgsizeInput = $("input#bldgsize-input"); 
+var projmgrInput = $("input#projmgr-input"); 
+var projsupInput = $("input#projsup-input"); 
+var architectInput = $("input#architect-input"); 
+var civilengInput = $("input#civileng-input"); 
+var mechengInput = $("input#mecheng-input"); 
+var elecengInput = $("input#eleceng-input");
+var plumbengInput = $("input#plumbeng-input");
+var landarchInput = $("input#landarch-input");
+var intdesignInput = $("input#intdesign-input"); 
+var schedstartInput = $("input#schedstart-input"); 
+var schedcomplInput = $("input#schedcompl-input"); 
+var actualstartInput = $("input#actualstart-input"); 
+var actualcomplInput = $("input#actualcompl-input"); 
+var schedreasonInput = $("input#schedreason-input"); 
+var initbudgetInput = $("input#initbudget-input"); 
+var finalbudgetInput = $("input#finalbudget-input"); 
+var budgetreasonInput = $("input#budgetreason-input"); 
+var sectorInput = $("input#sector-input"); 
+var consttypeInput = $("input#consttype-input");
+var leedInput = $("input#leed-input"); 
+var awardsInput = $("input#awards-input"); 
+var projchallengesInput = $("input#projchallenges-input"); 
+var projstrengthsInput = $("input#projstrengths-input"); 
 // The variable below holds the input from the hidden field.
 var UserId = $("input#UserId");
 //var userid = $("#user");
@@ -59,37 +61,37 @@ $(document).ready(function () {
     //var pers_spir = $("input[name=pers_spir]:checked").val();
 
     var reportData = {
-      projnameInput: proj_name,
-projaddressInput: proj_address,
-projcityInput: proj_city,
-projcountyInput: proj_county,
-projstateInput: proj_state,
-projdescInput: proj_desc,
-bldgsizeInput: bldg_size,
-projmgrInput: proj_mgr,
-projsupInput: proj_sup,
-architectInput: architect,
-civilengInput: civil_eng,
-mechengInput: mech_eng,
-plumbengInput: plumb_eng,
-elecengInput: elec_eng,
-landarchInput: land_arch,
-intdesignInput: int_design,
-schedstartInput: sched_start,
-schedcomplInput: sched_compl,
-actualstartInput: actual_start,
-actualcomplInput: actual_compl,
-schedreasonInput: sched_reason,
-initbudgetInput: init_budget,
-finalbudgetInput: final_budget,
-budgetreasonInput: budget_reason,
-sectorInput: sector,
-consttypeInput: const_type,
-leedInput: leed,
-awardsInput: awards,
-projchallengesInput: proj_challenges,
-projstrengthsInput: proj_strengths,
-userid: UserId
+      proj_name: projnameInput.val().trim(),
+      proj_address: projaddressInput.val().trim(),
+      proj_city: projcityInput.val().trim(),
+      proj_county: projcountyInput.val().trim(),
+      proj_state: projstateInput.val().trim(),
+      proj_desc: projdescInput.val().trim(),
+      bldg_size: bldgsizeInput.val().trim(),
+      proj_mgr: projmgrInput.val().trim(),
+      proj_sup: projsupInput.val().trim(),
+      architect: architectInput.val().trim(),
+      civil_eng: civilengInput.val().trim(),
+      mech_eng: mechengInput.val().trim(),
+      plumb_eng: plumbengInput.val().trim(),
+      elec_eng: elecengInput.val().trim(),
+      land_arch: landarchInput.val().trim(),
+      int_design: intdesignInput.val().trim(),
+      sched_start: schedstartInput.val(),
+      sched_compl: schedcomplInput.val(),
+      actual_start: actualstartInput.val(),
+      actual_compl: actualcomplInput.val(),
+      sched_reason: schedreasonInput.val().trim(),
+      init_budget: initbudgetInput.val(),
+      final_budget: finalbudgetInput.val(),
+      budget_reason: budgetreasonInput.val().trim(),
+      sector: sectorInput.val().trim(),
+      const_type: consttypeInput.val().trim(),
+      leed: leedInput.val(),
+      awards: awardsInput.val().trim(),
+      proj_challenges: projchallengesInput.val().trim(),
+      proj_strengths: projstrengthsInput.val().trim(),
+userid: UserId.val()
 
     };
     console.log("reportData captured");
@@ -103,8 +105,8 @@ userid: UserId
     }
     // If we have an entry for pers_spir, run the signUpUser function
     //enterReport(reportData.pers_spir, reportData.pers_emot, reportData.pers_health, reportData.pers_pr_req);
-    enterReport(reportData.proj_name, reportData.proj_address, reportData.proj_city, reportData.proj_county, reportData.proj_state, reportData.proj_desc, reportData.bldg_size, reportData.proj_mgr, reportData.proj_sup, reportData.architect, reportData.civil_eng, reportData.mech_eng, reportData.plumb_eng, reportData.land_arch, reportData.int_design, reportData.sched_start, reportData.sched_compl, reportData.sched_reason, reportData.init_budget, reportData.final_budget, reportData.budget_reason, reportData.sector, reportData.const_type, reportData.leed, reportData.awards, reportData.proj_challenges, reportData.proj_strengths, reportData.UserId);
-    projnameInput;
+    enterReport(reportData.proj_name, reportData.proj_address, reportData.proj_city, reportData.proj_county, reportData.proj_state, reportData.proj_desc, reportData.bldg_size, reportData.proj_mgr, reportData.proj_sup, reportData.architect, reportData.civil_eng, reportData.mech_eng, reportData.elec_eng, reportData.plumb_eng, reportData.land_arch, reportData.int_design, reportData.sched_start, reportData.sched_compl, reportData.actual_start, reportData.actual_compl, reportData.sched_reason, reportData.init_budget, reportData.final_budget, reportData.budget_reason, reportData.sector, reportData.const_type, reportData.leed, reportData.awards, reportData.proj_challenges, reportData.proj_strengths, reportData.UserId);
+projnameInput;
     projaddressInput;
     projcityInput;
     projcountyInput;
@@ -122,6 +124,8 @@ userid: UserId
     intdesignInput;
     schedstartInput;
     schedcomplInput;
+    actualstartInput;
+    actualcomplInput;
     schedreasonInput;
     initbudgetInput;
     finalbudgetInput;
@@ -137,7 +141,7 @@ userid: UserId
 
   // Does a post to the signup route. If successful, we are redirected to the members page
   // Otherwise we log any errors
-  function enterReport(proj_name, proj_address, proj_city, proj_county, proj_state, proj_desc, bldg_size, proj_mgr, proj_sup, architect, civil_eng, mech_eng, elec_eng, plumb_eng, land_arch, int_design, sched_start, sched_compl, sched_reason, init_budget, final_budget, budget_reason, sector, const_type, leed, awards, proj_challenges, proj_strengths, UserId) {
+  function enterReport(proj_name, proj_address, proj_city, proj_county, proj_state, proj_desc, bldg_size, proj_mgr, proj_sup, architect, civil_eng, mech_eng, elec_eng, plumb_eng, land_arch, int_design, sched_start, sched_compl, actual_start, actual_compl, sched_reason, init_budget, final_budget, budget_reason, sector, const_type, leed, awards, proj_challenges, proj_strengths, UserId) {
     var UserId = currentUser.id;
     // function enterReport(pers_spir, pers_emot, pers_health, pers_pr_req) {
     $.post("/api/reportentry", {
