@@ -87,9 +87,7 @@ module.exports = function(sequelize, DataTypes) {
     const_type: {
       type: DataTypes.TEXT
     },
-    leed: {
-      type: DataTypes.BOOLEAN
-    },
+   
     awards: {
       type: DataTypes.STRING
     },

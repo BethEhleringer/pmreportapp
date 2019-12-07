@@ -109,7 +109,6 @@ module.exports = function (app) {
       budget_reason: req.body.budget_reason,
       sector: req.body.sector,
       const_type: req.body.const_type,
-      leed: req.body.leed,
       awards: req.body.awards,
       proj_challenges: req.body.proj_challenges,
       proj_strengths: req.body.proj_strengths,
