@@ -100,6 +100,8 @@ userid: UserId.val()
 
     if (!reportData.proj_name || !reportData.sector) {
       return;
+
+
     }
     // If we have an entry for pers_spir, run the signUpUser function
     //enterReport(reportData.pers_spir, reportData.pers_emot, reportData.pers_health, reportData.pers_pr_req);
@@ -133,7 +135,9 @@ projnameInput;
     awardsInput;
     projchallengesInput;
     projstrengthsInput;
-    UserId
+    UserId;
+console.log("FALALALALA")
+    redirect();
   });
 
   // Does a post to the signup route. If successful, we are redirected to the members page
@@ -183,5 +187,9 @@ projnameInput;
   function handleLoginErr(err) {
     $("#alert .msg").text(err.responseJSON);
     $("#alert").fadeIn(500);
+  }
+
+  function redirect() {
+document.location.href = "/memberreports";
   }
 });
